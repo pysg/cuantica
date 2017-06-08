@@ -1,3 +1,4 @@
+from __future__ import division
 import numpy as np
 
 qcero=np.array([(1,),(0,)])
