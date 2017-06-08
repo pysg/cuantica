@@ -15,30 +15,30 @@ def phi2(uf):
         np.matmul(np.kron(hadamard,hadamard),
         estado(qcero,quno)))
     
-
+def phi3(uf):
+    return np.matmul(np.kron(hadamard,np.eye(2)),phi2(uf))
 
 #funcion que intercambia
 uf=np.array([(0,1,0,0),
             (1,0,0,0),
             (0,0,1,0),
             (0,0,0,1)])
-print phi2(uf) # == np.kron(((-qcero+quno)/np.sqrt(2)), ((qcero-quno)/np.sqrt(2))) # resultado que da en el libro
-
+print phi3(uf)
 #funcion constante 0
 uf=np.array([(1,0,0,0),
              (0,1,0,0),
              (0,0,1,0),
              (0,0,0,1)])
-print phi2(uf) # == np.kron(((qcero+quno)/np.sqrt(2)), ((qcero-quno)/np.sqrt(2))) # resultado que da en el libro
+print phi3(uf)
 #funcion constante 1
 uf=np.array([(0,1,0,0),
             (1,0,0,0),
             (0,0,0,1),
             (0,0,1,0)])
-print phi2(uf)
+print phi3(uf)
 #funcion identidad
 uf=np.array([(1,0,0,0),
             (0,1,0,0),
             (0,0,0,1),
             (0,0,1,0)])
-print phi2(uf)
+print phi3(uf)
