@@ -23,11 +23,27 @@ def probar_matriz(m):
     for e in estados():
         print "Por %s, da %s" % (e.T,np.matmul(m,e).T)
 
-
-i=np.array([(1,0,0,0),(0,1,0,0),(0,0,1,0),(0,0,0,1)])
+#funcion que intercambia
+i=np.array([(0,1,0,0),
+            (1,0,0,0),
+            (0,0,1,0),
+            (0,0,0,1)])
 probar_matriz(i)
-
-i=np.array([(0,1,0,0),(1,0,0,0),(0,0,1,0),(0,0,0,1)])
+#funcion constante 0
+i=np.array([(1,0,0,0),
+            (0,1,0,0),
+            (0,0,1,0),
+            (0,0,0,1)])
 probar_matriz(i)
-
-# es directo en realidad, no habla de funciones de aridad 2
+#funcion constante 1
+i=np.array([(0,1,0,0),
+            (1,0,0,0),
+            (0,0,0,1),
+            (0,0,1,0)])
+probar_matriz(i)
+#funcion identidad
+i=np.array([(1,0,0,0),
+            (0,1,0,0),
+            (0,0,0,1),
+            (0,0,1,0)])
+probar_matriz(i)
