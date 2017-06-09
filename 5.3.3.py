@@ -1,3 +1,11 @@
-c=0b011
-for i in range(8):
-    print "f({0:03b})={1:03b}".format(i,i^c)
+
+def toffoli(x,y,z):
+    return (x,y,z ^ (x and y))
+    
+    
+def nand(x,y):
+    return toffoli(x,y,1)[2]
+    
+
+def m_or(x,y):
+    return toffoli(toffoli(1,x,y)[2],x,y)[2]
